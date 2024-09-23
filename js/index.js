@@ -9,19 +9,37 @@
 
 // })
 
+// document.getElementById('btn-flood-Noakhali').addEventListener('click',function(){
+//    const balance= getInputFieldValueById('input-flood-Noakhali')
+//      const accountBalance=getTheElementId('mainBalance')
+//    if(accountBalance<balance || typeof balance!=='number'|| isNaN(balance) ){
+//       alert("Invalid Donation Amount")
+//    }
+//    else{
+//       const newBalance=accountBalance-balance;
+//    document.getElementById('mainBalance').innerText=newBalance
+// document.getElementById('Noakhali-donation').innerText=balance
+//    }
+   
+//    })
+
+
 document.getElementById('btn-flood-Noakhali').addEventListener('click',function(){
    const balance= getInputFieldValueById('input-flood-Noakhali')
-     const accountBalance=getTheElementId('mainBalance')
-   if(accountBalance<balance || typeof balance!=='number'|| isNaN(balance)){
-      alert("Invalid Donation Amount")
+  
+   const accountBalance=getTheElementId('mainBalance')
+   if(accountBalance<balance || isNaN(balance) ){
+      alert('Invalid Donation Amount')
    }
    else{
       const newBalance=accountBalance-balance;
       document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('Noakhali-donation').innerText=balance
    }
-   
-   })
+  
+
+})
+
 
 
 // Feni Donation

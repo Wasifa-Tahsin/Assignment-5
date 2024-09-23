@@ -1,6 +1,6 @@
 function getInputFieldValueById(id){
     const inputValue=document.getElementById(id).value
-    const inputNumber=parseFloat(inputValue)
+    const inputNumber=parseFloat(inputValue).toFixed(2)
     // console.log(inputNumber)
     return inputNumber;
     
@@ -17,7 +17,7 @@ function getInputFieldValueById(id){
         return classList
     }
 
-    // hideen
+    // hidden
     function showSectionById(id){
         // hide all the section
         document.getElementById('donate-section').classList.add('hidden')
