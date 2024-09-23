@@ -1,13 +1,29 @@
 // Noakhali donation 
-document.getElementById('btn-flood-Noakhali').addEventListener('click',function(){
-   const balance= getInputFieldValueById('input-flood-Noakhali')
+// document.getElementById('btn-flood-Noakhali').addEventListener('click',function(){
+//    const balance= getInputFieldValueById('input-flood-Noakhali')
   
-   const accountBalance=getTheElementId('mainBalance')
-   const newBalance=accountBalance-balance;
-   document.getElementById('mainBalance').innerText=newBalance
-document.getElementById('Noakhali-donation').innerText=balance
+//    const accountBalance=getTheElementId('mainBalance')
+//    const newBalance=accountBalance-balance;
+//    document.getElementById('mainBalance').innerText=newBalance
+// document.getElementById('Noakhali-donation').innerText=balance
 
-})
+// })
+
+document.getElementById('btn-flood-Noakhali').addEventListener('click',function(){
+   
+   if(inputFeniDonation<0 || typeof inputFeniDonation!=='number'|| isNaN(inputFeniDonation) ){
+      alert("Invalid Donation Amount")
+   }
+   else{
+      const balance= getInputFieldValueById('input-flood-Noakhali')
+     
+      const accountBalance=getTheElementId('mainBalance')
+      const newBalance=accountBalance-balance;
+      document.getElementById('mainBalance').innerText=newBalance
+   document.getElementById('Noakhali-donation').innerText=balance
+   }
+   
+   })
 
 
 // Feni Donation
@@ -45,19 +61,20 @@ document.getElementById('donation-btn').addEventListener('click',function(){
 })
 
 
-// history
-document.getElementById('History-btn').addEventListener('click',function(){
-  
-})
-
-// domain
-// document.getElementById('donation-btn').addEventListener('click',function(){
-//    showSectionById('donate-section')
-// })
-
 // blog click
 document.getElementById('blog-site').addEventListener('click',function(){
    window.location.href='./blog.html'
+})
+
+
+// history
+document.getElementById('History-btn').addEventListener('click',function(){
+  showSectionById('history-section')
+})
+
+// domain
+document.getElementById('donation-btn').addEventListener('click',function(){
+   showSectionById('donate-section')
 })
 
 
