@@ -10,3 +10,7 @@ function getInputFieldValueById(id){
         const result=parseFloat(elementId)
         return result;
     }
+    function addTheClassListOrHide(id){
+        const classList=document.getElementById(id)
+        return classList
+    }

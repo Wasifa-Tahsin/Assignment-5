@@ -28,3 +28,16 @@ document.getElementById('quota-movement-btn').addEventListener('click',function(
    document.getElementById('quota-movement').innerText=inputQuotaMovement
 
 })
+
+// History-btn
+document.getElementById('History-btn').addEventListener('click',function(){
+ addTheClassListOrHide('History-btn').classList.add('bg-lime-400')
+ addTheClassListOrHide('donation-btn').classList.remove('bg-lime-400')
+
+})
+
+// donation-btn
+document.getElementById('donation-btn').addEventListener('click',function(){
+   addTheClassListOrHide('donation-btn').classList.add('bg-lime-400')
+   addTheClassListOrHide('History-btn').classList.remove('bg-lime-400')
+})
