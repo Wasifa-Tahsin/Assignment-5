@@ -10,14 +10,12 @@
 // })
 
 document.getElementById('btn-flood-Noakhali').addEventListener('click',function(){
-   
-   if(inputFeniDonation<0 || typeof inputFeniDonation!=='number'|| isNaN(inputFeniDonation) ){
+   const balance= getInputFieldValueById('input-flood-Noakhali')
+     const accountBalance=getTheElementId('mainBalance')
+   if(accountBalance<balance || typeof balance!=='number'|| isNaN(balance)){
       alert("Invalid Donation Amount")
    }
    else{
-      const balance= getInputFieldValueById('input-flood-Noakhali')
-     
-      const accountBalance=getTheElementId('mainBalance')
       const newBalance=accountBalance-balance;
       document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('Noakhali-donation').innerText=balance
