@@ -35,6 +35,16 @@ document.getElementById('btn-flood-Noakhali').addEventListener('click',function(
       const newBalance=accountBalance-balance;
       document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('Noakhali-donation').innerText=balance
+
+   // add to history
+   const div=document.createElement('div')
+   div.innerHTML=`
+   <p>${balance}Taka is Donated for Flood Relief in Noakhali,Bangladesh</p>
+        <p>${new Date().toLocaleDateString()}</p>
+   `
+   const historyContainer=document.getElementById('history-container')
+   historyContainer.appendChild(div)
+
    }
   
 
