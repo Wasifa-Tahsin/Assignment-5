@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+
+  <header class="container mx-auto p-2 ">
+    <!-- navbar -->
+    <div class="navbar bg-amber-50  md:flex-row ">
+        <div class="navbar-start ">
+            <button id="blog-site" class="btn bg-lime-400 font-bold">Blog</button>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <img src="./assets/logo.png" alt="">
+          <a class="btn btn-ghost text-xl font-bold">Donate Bangladesh</a>
+        </div>
+        <div class="navbar-end  flex ">
+            <div class="hidden  md:flex ">
+              <img src="./assets/coin.png" alt="">
+            </div>
+            <a id="mainBalance" class="btn btn-ghost text-xl">5500 </a>
+           <div class="-ml-2">
+            <p class="">BDT</p>
+           </div>
+          
+        </div>
+      </div>
+</header>
+   <main class="mt-16 p-3">
+    <div>
+      <h1 class="text-5xl">Important FAQ ?</h1>
+    </div>
+    <div class="collapse collapse-arrow mt-7 p-3 bg-base-200 border-2">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+        <div class="collapse-content">
+          <p>The Document Object Model (DOM) is a programming API for HTML and XML documents.</p>
+        </div>
+      </div>
+    <div class="collapse collapse-arrow p-3 bg-base-200 border-2">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+        <div class="collapse-content">
+          <p>The easiest way to find an HTML element in the DOM, is by using the element id.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow p-3 bg-base-200 border-2">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM,and why is it useful?</div>
+        <div class="collapse-content">
+          <p>Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow p-3 bg-base-200 border-2">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+        <div class="collapse-content">
+          <p>The classList object only provide methods to change the class of an element. If you want to change other attributes like id , href , or src , you can use the setAttribute() method.</p>
+        </div>
+      </div>
+
+      
+      
+      
+   </main>
+   
+</body>
+</html>

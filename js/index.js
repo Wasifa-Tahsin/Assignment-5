@@ -9,6 +9,7 @@ document.getElementById('Noakhali-donation').innerText=balance
 
 })
 
+
 // Feni Donation
 document.getElementById('feni-donation-btn').addEventListener('click',function(){
    const inputFeniDonation=getInputFieldValueById('input-feni-donation')
@@ -26,6 +27,7 @@ document.getElementById('quota-movement-btn').addEventListener('click',function(
    const newBalance=accountBalance-inputQuotaMovement;
    document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('quota-movement').innerText=inputQuotaMovement
+   
 
 })
 
@@ -41,3 +43,22 @@ document.getElementById('donation-btn').addEventListener('click',function(){
    addTheClassListOrHide('donation-btn').classList.add('bg-lime-400')
    addTheClassListOrHide('History-btn').classList.remove('bg-lime-400')
 })
+
+
+// history
+document.getElementById('History-btn').addEventListener('click',function(){
+  
+})
+
+// domain
+// document.getElementById('donation-btn').addEventListener('click',function(){
+//    showSectionById('donate-section')
+// })
+
+// blog click
+document.getElementById('blog-site').addEventListener('click',function(){
+   window.location.href='./blog.html'
+})
+
+
+

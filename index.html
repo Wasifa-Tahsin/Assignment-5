@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
         <!-- navbar -->
         <div class="navbar bg-amber-50  md:flex-row ">
             <div class="navbar-start ">
-                <button class="btn bg-lime-400 font-bold">Blog</button>
+                <button id="blog-site" class="btn bg-lime-400 font-bold">Blog</button>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <img src="./assets/logo.png" alt="">
@@ -32,7 +32,7 @@
           </div>
     </header>
     <main>
-       <section>
+       <section >
         <!-- button-section -->
         <div class=" flex justify-center mt-16 gap-4">
             <button id="donation-btn" class="btn  font-bold">Donation</button>
@@ -40,7 +40,15 @@
         </div>
        </section>
 
-       <section class=" container  mx-auto mt-14 bg-white">
+
+       <!-- history -->
+        <section>
+          <div id="history container">
+
+          </div>
+        </section>
+
+       <section id="donate-section" class=" container  mx-auto mt-14 bg-white">
         <!-- Donation-cards -->
          <!-- flood at Noakhali -->
         <div class="hero bg-slate-50  ">
@@ -65,6 +73,7 @@
               </div>
             </div>
           </div>
+
           <!-- flood at feni -->
           <div class="hero bg-slate-50 mt-8 ">
             <div class="hero-content flex-col lg:flex-row gap-16">
