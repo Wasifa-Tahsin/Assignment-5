@@ -6,6 +6,12 @@ function getInputFieldValueById(id){
     
     }
 
+// function getInputFieldValueById(id){
+//     const inputvalue=isNaN(id)
+//     const result=parseFloat(inputvalue).value
+//     return result 
+// }
+
     function getTheElementId(id){
         const elementId=document.getElementById(id).innerText
         const result=parseFloat(elementId)

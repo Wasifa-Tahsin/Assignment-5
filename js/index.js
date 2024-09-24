@@ -4,7 +4,7 @@ document.getElementById('btn-flood-Noakhali').addEventListener('click',function(
    const accountBalance=getTheElementId('mainBalance')
    // Reset the input field
 //   document.getElementById('balance').value = '';
-   if(accountBalance<balance ||  isNaN(balance) ||balance<0 ){
+   if(accountBalance<balance ||  isNaN(balance)  ||balance<0 ){
       alert('Invalid Donation Amount')
       // document.getElementById('my_modal_1').classList.add('hidden')
      
@@ -14,7 +14,7 @@ document.getElementById('btn-flood-Noakhali').addEventListener('click',function(
       const newBalance=accountBalance-balance;
       document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('Noakhali-donation').innerText=balance
-   const time = new Date().toLocaleTimeString()
+   
    // add to history
    const div=document.createElement('div')
    div.className="border-2 bg-white h-24 p-2"
