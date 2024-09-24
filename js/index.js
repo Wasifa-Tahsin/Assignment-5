@@ -24,8 +24,8 @@ document.getElementById('btn-flood-Noakhali').addEventListener('click',function(
    // add to history
    const div=document.createElement('div')
    div.innerHTML=`
-   <p>${balance}Taka is Donated for Flood Relief in Noakhali,Bangladesh</p>
-        <p>${new Date().toLocaleDateString()}</p>
+   <p class="text-xl py-3 ">${balance}Taka is Donated for Flood Relief in Noakhali,Bangladesh</p>
+        <p class="text-md">${new Date().toLocaleDateString()}</p>
    `
    const historyContainer=document.getElementById('history-container')
    historyContainer.appendChild(div)
@@ -49,8 +49,8 @@ document.getElementById('feni-donation-btn').addEventListener('click',function()
     // add to history
     const div=document.createElement('div')
     div.innerHTML=`
-    <p>${inputFeniDonation}Taka is Donated for Flood Relief in Feni,Bangladesh</p>
-         <p>${new Date().toLocaleDateString()}</p>
+    <p class="text-xl py-3 mt-5">${inputFeniDonation}Taka is Donated for Flood Relief in Feni,Bangladesh</p>
+         <p class="text md ">${new Date().toLocaleDateString()}</p>
     `
     const historyContainer=document.getElementById('history-container')
     historyContainer.appendChild(div)
@@ -73,8 +73,8 @@ document.getElementById('quota-movement-btn').addEventListener('click',function(
    // add to history
    const div=document.createElement('div')
    div.innerHTML=`
-   <p>${inputQuotaMovement}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
-        <p>${new Date().toLocaleDateString()}</p>
+   <p class="text-xl py-3 mt-5">${inputQuotaMovement}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+        <p class="text md ">${new Date().toLocaleDateString()}</p>
    `
    const historyContainer=document.getElementById('history-container')
    historyContainer.appendChild(div)
