@@ -1,14 +1,4 @@
 // Noakhali donation 
-// document.getElementById('btn-flood-Noakhali').addEventListener('click',function(){
-//    const balance= getInputFieldValueById('input-flood-Noakhali')
-  
-//    const accountBalance=getTheElementId('mainBalance')
-//    const newBalance=accountBalance-balance;
-//    document.getElementById('mainBalance').innerText=newBalance
-// document.getElementById('Noakhali-donation').innerText=balance
-
-// })
-
 document.getElementById('btn-flood-Noakhali').addEventListener('click',function(){
    const balance= getInputFieldValueById('input-flood-Noakhali')
   
@@ -69,6 +59,14 @@ document.getElementById('quota-movement-btn').addEventListener('click',function(
       const newBalance=accountBalance-inputQuotaMovement;
    document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('quota-movement').innerText=inputQuotaMovement
+
+
+
+
+
+   // sticky navbar
+   
+
 
    // add to history
    const div=document.createElement('div')
