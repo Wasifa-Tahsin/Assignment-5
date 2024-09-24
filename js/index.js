@@ -45,6 +45,15 @@ document.getElementById('feni-donation-btn').addEventListener('click',function()
       const newBalance=accountBalance-inputFeniDonation;
    document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('feni-donation').innerText=inputFeniDonation
+
+    // add to history
+    const div=document.createElement('div')
+    div.innerHTML=`
+    <p>${inputFeniDonation}Taka is Donated for Flood Relief in Feni,Bangladesh</p>
+         <p>${new Date().toLocaleDateString()}</p>
+    `
+    const historyContainer=document.getElementById('history-container')
+    historyContainer.appendChild(div)
    }
 
 })
@@ -60,6 +69,15 @@ document.getElementById('quota-movement-btn').addEventListener('click',function(
       const newBalance=accountBalance-inputQuotaMovement;
    document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('quota-movement').innerText=inputQuotaMovement
+
+   // add to history
+   const div=document.createElement('div')
+   div.innerHTML=`
+   <p>${inputQuotaMovement}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+        <p>${new Date().toLocaleDateString()}</p>
+   `
+   const historyContainer=document.getElementById('history-container')
+   historyContainer.appendChild(div)
    }
    
 
