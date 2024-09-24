@@ -1,25 +1,28 @@
 // Noakhali donation 
 document.getElementById('btn-flood-Noakhali').addEventListener('click',function(){
    const balance= getInputFieldValueById('input-flood-Noakhali')
-  
    const accountBalance=getTheElementId('mainBalance')
    // Reset the input field
 //   document.getElementById('balance').value = '';
-   if(accountBalance<balance || isNaN(balance) ||balance<0 ){
+   if(accountBalance<balance ||  isNaN(balance) ||balance<0 ){
       alert('Invalid Donation Amount')
-      document.getElementById('my_modal_1').classList.add('hidden')
+      // document.getElementById('my_modal_1').classList.add('hidden')
+     
    }
    else{
+      my_modal_1.showModal()
       const newBalance=accountBalance-balance;
       document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('Noakhali-donation').innerText=balance
-   
+   const time = new Date().toLocaleTimeString()
    // add to history
    const div=document.createElement('div')
    div.className="border-2 bg-white h-24 p-2"
    div.innerHTML=`
    <p class="md:text-xl md:py-3 ">${balance}Taka is Donated for Flood Relief in Noakhali,Bangladesh</p>
-        <p class="text-md">${new Date().toLocaleDateString()}</p>
+
+        <p class="text-md">Date:${new Date().toLocaleDateString()} <span>Time:${new Date().toLocaleTimeString()}</span></p>
+
    `
    const historyContainer=document.getElementById('history-container')
    historyContainer.appendChild(div)
@@ -36,6 +39,7 @@ document.getElementById('feni-donation-btn').addEventListener('click',function()
       alert('Invalid Donation Amount')
    }
    else{
+      my_modal_1.showModal()
       const newBalance=accountBalance-inputFeniDonation;
    document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('feni-donation').innerText=inputFeniDonation
@@ -45,7 +49,7 @@ document.getElementById('feni-donation-btn').addEventListener('click',function()
     div.className="border-2 bg-white h-24 p-2"
     div.innerHTML=`
     <p class="md:text-xl md:py-3 ">${inputFeniDonation}Taka is Donated for Flood Relief in Feni,Bangladesh</p>
-         <p class="text md ">${new Date().toLocaleDateString()}</p>
+         <p class="text md ">Date:${new Date().toLocaleDateString()}  <span>Time:${new Date().toLocaleTimeString()}</span></p>
     `
     const historyContainer=document.getElementById('history-container')
     historyContainer.appendChild(div)
@@ -61,6 +65,7 @@ document.getElementById('quota-movement-btn').addEventListener('click',function(
       alert('Invalid Donation Amount')
    }
    else{
+      my_modal_1.showModal()
       const newBalance=accountBalance-inputQuotaMovement;
    document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('quota-movement').innerText=inputQuotaMovement
@@ -73,7 +78,7 @@ document.getElementById('quota-movement-btn').addEventListener('click',function(
    div.className="border-2 bg-white h-24 p-2"
    div.innerHTML=`
    <p class="md:text-xl md:py-3 ">${inputQuotaMovement}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
-        <p class="text md ">${new Date().toLocaleDateString()}</p>
+        <p class="text md ">Date:${new Date().toLocaleDateString()}  <span>Time:${new Date().toLocaleTimeString()}</span></p>
    `
    const historyContainer=document.getElementById('history-container')
    historyContainer.appendChild(div)
