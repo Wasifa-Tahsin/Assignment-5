@@ -9,7 +9,6 @@
 
 // })
 
-
 document.getElementById('btn-flood-Noakhali').addEventListener('click',function(){
    const balance= getInputFieldValueById('input-flood-Noakhali')
   
@@ -39,9 +38,14 @@ document.getElementById('btn-flood-Noakhali').addEventListener('click',function(
 document.getElementById('feni-donation-btn').addEventListener('click',function(){
    const inputFeniDonation=getInputFieldValueById('input-feni-donation')
    const accountBalance=getTheElementId('mainBalance')
-   const newBalance=accountBalance-inputFeniDonation;
+   if(accountBalance<inputFeniDonation || isNaN(inputFeniDonation) ||inputFeniDonation<0 ){
+      alert('Invalid Donation Amount')
+   }
+   else{
+      const newBalance=accountBalance-inputFeniDonation;
    document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('feni-donation').innerText=inputFeniDonation
+   }
 
 })
 
@@ -49,9 +53,14 @@ document.getElementById('feni-donation-btn').addEventListener('click',function()
 document.getElementById('quota-movement-btn').addEventListener('click',function(){
    const inputQuotaMovement=getInputFieldValueById('input-quota-movement')
    const accountBalance=getTheElementId('mainBalance')
-   const newBalance=accountBalance-inputQuotaMovement;
+   if(accountBalance<inputQuotaMovement || isNaN(inputQuotaMovement) ||inputQuotaMovement<0 ){
+      alert('Invalid Donation Amount')
+   }
+   else{
+      const newBalance=accountBalance-inputQuotaMovement;
    document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('quota-movement').innerText=inputQuotaMovement
+   }
    
 
 })
