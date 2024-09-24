@@ -61,7 +61,7 @@ document.getElementById('feni-donation-btn').addEventListener('click',function()
       alert('invalid')
    }
    else{
-     
+      my_modal_1.showModal()
       const newBalance=accountBalance-inputFeniDonation;
       const donation=getTheElementId('feni-donation')
       const totalDonation=inputFeniDonation+donation;
