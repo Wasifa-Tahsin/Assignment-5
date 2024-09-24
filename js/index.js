@@ -3,16 +3,20 @@ document.getElementById('btn-flood-Noakhali').addEventListener('click',function(
    const balance= getInputFieldValueById('input-flood-Noakhali')
   
    const accountBalance=getTheElementId('mainBalance')
+   // Reset the input field
+//   document.getElementById('balance').value = '';
    if(accountBalance<balance || isNaN(balance) ||balance<0 ){
       alert('Invalid Donation Amount')
+      document.getElementById('my_modal_1').classList.add('hidden')
    }
    else{
       const newBalance=accountBalance-balance;
       document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('Noakhali-donation').innerText=balance
-
+   
    // add to history
    const div=document.createElement('div')
+   div.className="border-2 bg-white h-24 p-2"
    div.innerHTML=`
    <p class="text-xl py-3 ">${balance}Taka is Donated for Flood Relief in Noakhali,Bangladesh</p>
         <p class="text-md">${new Date().toLocaleDateString()}</p>
@@ -38,8 +42,9 @@ document.getElementById('feni-donation-btn').addEventListener('click',function()
 
     // add to history
     const div=document.createElement('div')
+    div.className="border-2 bg-white h-24 p-2"
     div.innerHTML=`
-    <p class="text-xl py-3 mt-5">${inputFeniDonation}Taka is Donated for Flood Relief in Feni,Bangladesh</p>
+    <p class="text-xl py-3 ">${inputFeniDonation}Taka is Donated for Flood Relief in Feni,Bangladesh</p>
          <p class="text md ">${new Date().toLocaleDateString()}</p>
     `
     const historyContainer=document.getElementById('history-container')
@@ -64,8 +69,9 @@ document.getElementById('quota-movement-btn').addEventListener('click',function(
 
    // add to history
    const div=document.createElement('div')
+   div.className="border-2 bg-white h-24 p-2"
    div.innerHTML=`
-   <p class="text-xl py-3 mt-7">${inputQuotaMovement}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+   <p class="text-xl py-3 ">${inputQuotaMovement}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
         <p class="text md ">${new Date().toLocaleDateString()}</p>
    `
    const historyContainer=document.getElementById('history-container')
