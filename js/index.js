@@ -62,12 +62,6 @@ document.getElementById('quota-movement-btn').addEventListener('click',function(
 
 
 
-
-
-   // sticky navbar
-   
-
-
    // add to history
    const div=document.createElement('div')
    div.innerHTML=`
@@ -99,6 +93,8 @@ document.getElementById('donation-btn').addEventListener('click',function(){
 document.getElementById('blog-site').addEventListener('click',function(){
    window.location.href='./blog.html'
 })
+
+   
 
 
 // history

@@ -25,3 +25,8 @@ function getInputFieldValueById(id){
         // remove hidden
         document.getElementById(id).classList.remove('hidden')
     }
+
+ // home click
+ document.getElementById('Home-site').addEventListener('click',function(){
+    window.location.href='./index.html'
+ })
