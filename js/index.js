@@ -6,14 +6,14 @@ document.getElementById('btn-flood-Noakhali').addEventListener('click',function(
 //   document.getElementById('balance').value = '';
    if(accountBalance<balance ||  isNaN(balance)  ||balance<0 ){
       alert('Invalid Donation Amount')
-      // document.getElementById('my_modal_1').classList.add('hidden')
-     
    }
    else{
       my_modal_1.showModal()
       const newBalance=accountBalance-balance;
+      const donation=getTheElementId('Noakhali-donation')
+      const totalDonation=balance+donation
       document.getElementById('mainBalance').innerText=newBalance
-   document.getElementById('Noakhali-donation').innerText=balance
+   document.getElementById('Noakhali-donation').innerText=totalDonation
    
    // add to history
    const div=document.createElement('div')
@@ -31,18 +31,42 @@ document.getElementById('btn-flood-Noakhali').addEventListener('click',function(
 
 
 
+
+// document.getElementById('btn-flood-Noakhali').addEventListener('click',function(){
+//    const currentBalance=getElementsId("mainBalance")
+//    const inputValue=getInputField('input-flood-Noakhali')
+//    if(currentBalance<inputValue){
+//       alert('Insufficcent Balance')
+//    }
+//    else if(isNaN(inputValue)|| inputValue==0){
+//       alert('Invalid Input')
+//       return
+//    }
+//    const newBalance=currentBalance-inputValue;
+//    const donation=getElementsId('Noakhali-donation')
+//    const totalDonation=donation+inputValue;
+//    document.getElementById('Noakhali-donation').innerText=totalDonation
+//    document.getElementById('mainBalance').innerText=newBalance
+   
+// })
+
 // Feni Donation
 document.getElementById('feni-donation-btn').addEventListener('click',function(){
    const inputFeniDonation=getInputFieldValueById('input-feni-donation')
    const accountBalance=getTheElementId('mainBalance')
-   if(accountBalance<inputFeniDonation || isNaN(inputFeniDonation) ||inputFeniDonation<0 ){
+   if(accountBalance<inputFeniDonation ||inputFeniDonation<0 ){
       alert('Invalid Donation Amount')
    }
+   else if( isNaN(inputFeniDonation) ){
+      alert('invalid')
+   }
    else{
-      my_modal_1.showModal()
+     
       const newBalance=accountBalance-inputFeniDonation;
+      const donation=getTheElementId('feni-donation')
+      const totalDonation=inputFeniDonation+donation;
    document.getElementById('mainBalance').innerText=newBalance
-   document.getElementById('feni-donation').innerText=inputFeniDonation
+   document.getElementById('feni-donation').innerText=totalDonation
 
     // add to history
     const div=document.createElement('div')
@@ -67,8 +91,10 @@ document.getElementById('quota-movement-btn').addEventListener('click',function(
    else{
       my_modal_1.showModal()
       const newBalance=accountBalance-inputQuotaMovement;
+      const quota=getTheElementId('quota-movement')
+      const totalDonation=quota+inputQuotaMovement
    document.getElementById('mainBalance').innerText=newBalance
-   document.getElementById('quota-movement').innerText=inputQuotaMovement
+   document.getElementById('quota-movement').innerText=totalDonation
    // alert('donation done')
 
 

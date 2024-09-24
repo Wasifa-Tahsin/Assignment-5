@@ -1,6 +1,6 @@
 function getInputFieldValueById(id){
     const inputValue=document.getElementById(id).value
-    const inputNumber=parseFloat(inputValue).toFixed(2)
+    const inputNumber=parseFloat(inputValue)
     // console.log(inputNumber)
     return inputNumber;
     
@@ -10,6 +10,19 @@ function getInputFieldValueById(id){
 //     const inputvalue=isNaN(id)
 //     const result=parseFloat(inputvalue).value
 //     return result 
+// }
+
+
+// function getElementsId(id){
+//    const value=parseFloat(document.getElementById(id).innerText);
+//    return value;
+   
+
+// }
+
+// function getInputField(id){
+//    const inputValue=parseFloat(document.getElementById(id).value)
+//    return inputValue;
 // }
 
     function getTheElementId(id){
