@@ -64,6 +64,7 @@ document.getElementById('quota-movement-btn').addEventListener('click',function(
       const newBalance=accountBalance-inputQuotaMovement;
    document.getElementById('mainBalance').innerText=newBalance
    document.getElementById('quota-movement').innerText=inputQuotaMovement
+   // alert('donation done')
 
 
 
